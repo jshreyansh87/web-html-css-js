@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body{
+    background-color: blanchedalmond;
+}
+
+.headings{
+    text-decoration: underline;
+    margin: 20px auto 15px auto;
+}
+
+table, th, td{
+    border: 1px solid orange;
+}
+
+table {
+    border: 2px dashed black;
+}
+
+div{
+    max-width: fit-content;
+    margin: auto;
+}
+
+ul{
+    margin: 15px auto;
+}
+
+p{
+    margin: 10px auto;
+}
+li{
+    max-width: fit-content;
+}
