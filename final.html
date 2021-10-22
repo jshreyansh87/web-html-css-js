@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E19CSE241</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        .course-container{
+            height: 100vh;
+            width: 100%;
+            background-image: url('https://educationiconnect.com/wp-content/uploads/2020/02/Bennett-University-Admission.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .course-select{
+            padding-top: 5%;
+            text-align: center;
+            color: darkblue;
+        }
+
+        .input-container{
+            width: 100%;
+            padding: 5% 0%;
+            margin-left: auto;
+        }
+
+        .course-input{
+            width: fit-content;
+            margin: auto;
+        }
+
+        #course-select{
+            padding: 5px 25px;
+            border: none;
+            outline: none;
+        }
+
+        /* SECOND WINDOW */
+        .branch-container{
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://assets.change.org/photos/4/pr/rv/WWprRvslyVQUjEg-800x450-noPad.jpg?1568008296');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #btech-select{
+            border: none;
+            outline: none;
+            margin: auto;
+            padding: 5px 20px 5px 20px;
+        }
+        #management-select{
+            border: none;
+            outline: none;
+            margin: auto;
+            padding: 5px 20px 5px 20px;
+        }
+        #law-select{
+            border: none;
+            outline: none;
+            margin: auto;
+            padding: 5px 20px 5px 20px;
+        }
+        .inner-div{
+            width: fit-content;
+            margin: auto;
+        }
+        .branch-select{
+            width: 100%;
+            padding-top: 5%;
+        }
+
+
+
+        /* THIRD WINDOW */
+        .table-container{
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://www.collegesearch.in/upload/institute/images/large/171208041059_campus3.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .table-heading-container{
+            padding-top: 5%;
+            text-align: center;
+            color: white;
+        }
+        .table-main-container{
+            width: fit-content;
+            margin: auto;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 3px 5px;
+            text-align: center;
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="course-container" class="course-container">
+        <div class="course-select">
+            <h1>Select your course</h1>
+        </div>
+        <div class="input-container">
+            <div class="course-input">
+                <select name="course-select" id="course-select">
+                    <option value="0">_</option>
+                    <option value="1">BTech</option>
+                    <option value="2">Management</option>
+                    <option value="3">Law</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div id="branch-container" class="branch-container">
+        <div class="course-select">
+            <h1>Select your branch</h1>
+        </div>
+        <div id="btech" class="branch-select">
+            <div class="inner-div">
+                <select name="course-select" id="btech-select">
+                    <option value="0">-</option>
+                    <option value="1">CSE</option>
+                    <option value="2">ECE</option>
+                    <option value="3">Aerospace</option>
+                </select>
+            </div>
+        </div>
+        <div id="management" class="branch-select">
+            <div class="inner-div">
+                <select name="course-select" id="management-select">
+                    <option value="0">-</option>
+                    <option value="1">BBA</option>
+                    <option value="2">MBA</option>
+                    <option value="3">MassCom</option>
+                </select>
+            </div>
+        </div>
+        <div id="law" class="branch-select">
+            <div class="inner-div">
+                <select name="course-select" id="law-select">
+                    <option value="0">-</option>
+                    <option value="1">BALLB</option>
+                    <option value="2">BALLB-Hons.</option>
+                    <option value="3">LLM</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="table-container" class="table-container">
+        <div class="table-heading-container">
+            <h1 id="table-heading"></h1>
+        </div>
+        <div class="table-main-container">
+            <table cellpadding="0" cellspacing="0">
+                <colgroup>
+                    <col class="FirstColumn">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th colspan="2">Sem 1</th>
+                        <th colspan="2">Sem 2</th>
+                        <th colspan="2">Sem 3</th>
+                        <th colspan="2">Sem 4</th>
+                        <th colspan="2">Sem 5</th>
+                        <th colspan="2">Sem 6</th>
+                        <th colspan="2">Sem 7</th>
+                        <th colspan="2">Sem 8</th>
+                    </tr>
+                </thead>
+                <tbody class="secondHeader">
+                    <tr>
+                        <th>SCode</th>
+                        <th>SName</th>
+                        <th>SCode</th>
+                        <th>SName</th>
+                        <th>SCode</th>
+                        <th>SName</th>
+                        <th>SCode</th>
+                        <th>SName</th>
+                        <th>SCode</th>
+                        <th>SName</th>
+                        <th>SCode</th>
+                        <th>SName</th>
+                        <th>SCode</th>
+                        <th>SName</th>
+                        <th>SCode</th>
+                        <th>SName</th>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>s-1</td>
+                        <td>201</td>
+                        <td>s-1</td>
+                        <td>301</td>
+                        <td>s-1</td>
+                        <td>401</td>
+                        <td>s-1</td>
+                        <td>501</td>
+                        <td>s-1</td>
+                        <td>601</td>
+                        <td>s-1</td>
+                        <td>701</td>
+                        <td>s-1</td>
+                        <td>801</td>
+                        <td>s-1</td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>s-2</td>
+                        <td>202</td>
+                        <td>s-2</td>
+                        <td>302</td>
+                        <td>s-2</td>
+                        <td>402</td>
+                        <td>s-2</td>
+                        <td>502</td>
+                        <td>s-2</td>
+                        <td>602</td>
+                        <td>s-2</td>
+                        <td>702</td>
+                        <td>s-2</td>
+                        <td>802</td>
+                        <td>s-2</td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>s-3</td>
+                        <td>203</td>
+                        <td>s-3</td>
+                        <td>303</td>
+                        <td>s-3</td>
+                        <td>403</td>
+                        <td>s-3</td>
+                        <td>503</td>
+                        <td>s-3</td>
+                        <td>603</td>
+                        <td>s-3</td>
+                        <td>703</td>
+                        <td>s-3</td>
+                        <td>803</td>
+                        <td>s-3</td>
+                    </tr>
+                    <tr>
+                        <td>104</td>
+                        <td>s-4</td>
+                        <td>204</td>
+                        <td>s-4</td>
+                        <td>304</td>
+                        <td>s-4</td>
+                        <td>404</td>
+                        <td>s-4</td>
+                        <td>504</td>
+                        <td>s-4</td>
+                        <td>604</td>
+                        <td>s-4</td>
+                        <td>704</td>
+                        <td>s-4</td>
+                        <td>804</td>
+                        <td>s-4</td>
+                    </tr>
+                    <tr>
+                        <td>105</td>
+                        <td>s-5</td>
+                        <td>205</td>
+                        <td>s-5</td>
+                        <td>305</td>
+                        <td>s-5</td>
+                        <td>405</td>
+                        <td>s-5</td>
+                        <td>505</td>
+                        <td>s-5</td>
+                        <td>605</td>
+                        <td>s-5</td>
+                        <td>705</td>
+                        <td>s-5</td>
+                        <td>805</td>
+                        <td>s-5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </body>
+        </html>
+        </div>
+    </div>
+
+    <script>
+        let courseI = document.getElementById('course-select');
+        let course = document.getElementById('course-container');
+        let branch = document.getElementById('branch-container');
+        let table = document.getElementById('table-container');
+        let cur_win = 1;
+
+        const OnWindow = (cur_win)=>{
+            if(cur_win==1){
+                course.hidden = false;
+                branch.hidden = true;
+                table.hidden = true;
+            }else if(cur_win==2){
+                course.hidden = true;
+                branch.hidden = false;
+                table.hidden = true;
+            }else if(cur_win==3){
+                course.hidden = true;
+                branch.hidden = true;
+                table.hidden = false;
+            }
+        }
+        OnWindow(cur_win);
+
+        const showTable = (course, branch)=>{
+            let tableHeading = document.getElementById("table-heading");
+            OnWindow(3);
+            switch(course){
+                case 1:
+                    switch(branch){
+                        case 1:
+                            tableHeading.innerText="Course: Btech, Branch: CSE";
+                            break;
+                        case 2:
+                            tableHeading.innerText="Course: Btech, Branch: ECE";
+                            break;
+                        case 3:
+                            tableHeading.innerText="Course: Btech, Branch: Aerospace";
+                            break;
+                    }
+                    break;
+                case 2:
+                    switch(branch){
+                        case 1:
+                            tableHeading.innerText="Course: Management, Branch: BBA";
+                            break;
+                        case 2:
+                            tableHeading.innerText="Course: Management, Branch: MBA";
+                            break;
+                        case 3:
+                            tableHeading.innerText="Course: Management, Branch: MassCom.";
+                            break;
+                    }
+                    break;
+                case 3:
+                    switch(branch){
+                        case 1:
+                            tableHeading.innerText="Course: Law, Branch: BALLB";
+                            break;
+                        case 2:
+                            tableHeading.innerText="Course: Law, Branch: BALLB-Hons.";
+                            break;
+                        case 3:
+                            tableHeading.innerText="Course: Law, Branch: LLM";
+                            break;
+                    }
+                    break;
+            }
+        }
+
+        courseI.onchange = (value)=>{
+            let val = parseInt(value.target.value);
+            cur_win=2;
+            OnWindow(cur_win);
+            let btech = document.getElementById("btech");
+            let management = document.getElementById("management");
+            let law = document.getElementById("law");
+            let choice = -1;
+            if(val==1){
+                btech.hidden=false;
+                management.hidden = true;
+                law.hidden = true;
+                document.getElementById('btech-select').onchange=(chs)=>{
+                    choice = parseInt(chs.target.value);
+                    showTable(val, choice);
+                } 
+            }else if(val==2){
+                btech.hidden = true;
+                management.hidden = false;
+                law.hidden = true;
+                document.getElementById('management-select').onchange=(chs)=>{
+                    choice = parseInt(chs.target.value);
+                    showTable(val, choice);
+                }
+            }else if(val==3){
+                btech.hidden = true;
+                management.hidden = true;
+                law.hidden = false;
+                document.getElementById('law-select').onchange=(chs)=>{
+                    choice = parseInt(chs.target.value);
+                    showTable(val, choice);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
