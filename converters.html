@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E19CSE241</title>
+
+        <style>
+            body{
+                background-color: green;
+            }
+            .input-container{
+                text-align: center;
+                padding-top: 10%;
+                padding-bottom: 3%;
+            }
+            .result{
+                text-align: center;
+            }
+            h2{
+                color: white;
+                font-weight: 600;
+                font-size: 2.5rem;
+            }
+            input{
+                outline: none;
+                border: none;
+                padding: 5px 10px;
+            }
+            label{
+                color: white;
+                font-size: larger;
+            }
+            button{
+                outline: none;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+            .button{
+                width: fit-content;
+                margin: auto;
+                padding: 30px;
+            }
+            .grid-container{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                padding: 10px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="input-container">
+            <label for="input">enter the value: </label>
+            <input type="text" name="input" id="input">
+        </div>
+        <div class="result">
+            <h2 id="result">result will be shown here</h2>
+        </div>
+        <div class="grid-container">
+            <div class="button">
+                <button onclick="d2b()" id="d2b">decimal to binary</button>
+            </div>
+            <div class="button">
+                <button onclick="b2d()" id="b2d">binary to deciaml</button>
+            </div>
+            <div class="button">
+                <button onclick="b2o()" id="b2o">binary to octal</button>
+            </div>
+            <div class="button">
+                <button onclick="o2b()" id="o2b">octal to binary</button>
+            </div>
+            <div class="button">
+                <button onclick="b2h()" id="b2h">binary to hexadecimal</button>
+            </div>
+            <div class="button">
+                <button onclick="h2b()" id="h2b">hexadecimal to binary</button>
+            </div>
+        </div>
+
+        <script>
+            var target = document.getElementById('result');
+            var input = document.getElementById('input');
+
+            function apply(res){
+                target.innerHTML = res;
+            }
+
+            function d2b(){
+                var dec = input.value;
+                var res = (dec >>> 0).toString(2);
+                apply(res)
+            }
+
+            function b2d(){
+                var bstr = input.value;
+                var res = parseInt((bstr + '').replace(/[^01]/gi, ''), 2);
+                apply(res)
+            }
+
+            function b2o(){
+                var bstr = input.value;
+                var octal = parseInt(bstr, 2).toString(8);
+                apply(octal)
+            }
+
+            function o2b(){
+                var octal = input.value;
+                var decimal = parseInt(octal, 8)
+                var binary = (decimal >>> 0).toString(2);
+                apply(binary)
+            }
+            
+            function b2h(){
+                var binary = input.value;
+                var decimal = parseInt((binary + '').replace(/[^01]/gi, ''), 2);
+                var hex = decimal.toString(16);
+                apply(hex);
+            }
+
+            function h2b(){
+                var hex = input.value;
+                var decimal = parseInt(hex, 16);
+                var binary = (decimal >>> 0).toString(2);
+                apply(binary);
+            }
+
+        </script>
+
+    </body>
+
+</html>
